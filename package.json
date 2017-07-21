@@ -1,20 +1,9 @@
 {
   "name": "hiproxy",
-  "version": "1.1.6",
+  "private": true,
+  "version": "1.0.0",
   "description": "hiproxy - lightweight and powerful proxy tool for front-end developer based on Node.js.",
-  "main": "src/index.js",
-  "bin": {
-    "hiproxy": "bin/cli.js",
-    "hip": "bin/cli.js"
-  },
-  "scripts": {
-    "doc": "jsdoc2md src/*.js src/listeners/*.js src/listeners/request/*.js",
-    "test": "nyc mocha test/**/*.test.js --timeout 5000",
-    "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
-    "report": "npm test && nyc report --reporter=lcov --reporter=html",
-    "semistandard": "semistandard",
-    "t": "nyc mocha test/tool/*.test.js && nyc report --reporter=lcov --reporter=html"
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hiproxy/hiproxy.git"
@@ -35,40 +24,5 @@
   "bugs": {
     "url": "https://github.com/hiproxy/hiproxy/issues"
   },
-  "homepage": "https://github.com/hiproxy/hiproxy#readme",
-  "dependencies": {
-    "colors": "^1.1.2",
-    "hemsl": "^1.2.5",
-    "node-forge": "^0.7.1",
-    "op-browser": "^1.0.1",
-    "os-homedir": "^1.0.2",
-    "simple-mime": "^0.1.0",
-    "url-pattern": "^1.0.3"
-  },
-  "devDependencies": {
-    "codecov": "^2.1.0",
-    "ghooks": "^2.0.0",
-    "mocha": "^3.2.0",
-    "nyc": "^10.3.2",
-    "request": "^2.79.0",
-    "semistandard": "^10.0.0"
-  },
-  "config": {
-    "ghooks": {
-      "pre-commit": "npm run semistandard",
-      "pre-push": "npm test"
-    }
-  },
-  "semistandard": {
-    "globals": [
-      "log",
-      "args",
-      "it",
-      "describe",
-      "beforeEach",
-      "afterEach",
-      "before",
-      "after"
-    ]
-  }
+  "homepage": "https://github.com/hiproxy/hiproxy#readme"
 }
